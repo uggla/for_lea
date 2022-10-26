@@ -1,9 +1,9 @@
-// En rust, le type Result sert a gérer les erreurs.
+// En rust, le type Result sert à gérer les erreurs.
 // Moi je vois ça comme une enveloppe que l'on retourne a l'appelant qui contient la réponse.
-// A l'interieur il y a soit Ok(T) réponse positive soit Err(E) réponse négative. (T et E sont les
+// A l'intérieur il y a soit Ok(T) pas d'erreur le résultat et de type T, soit Err(E), on a une erreur de type E. (T et E sont les
 // types de ton choix)
 //
-// Si on regarde un peu sous le capot de result, un Result est en fait un enum,
+// Si on regarde un peu sous le capot d'un Result, un Result est en fait un enum,
 // avec 2 variants Ok(T) et Err(E).
 //
 // pub enum Result<T, E> {
@@ -14,7 +14,7 @@
 
 // A noter que l'exemple ici est complètement bidon...
 //
-// ici                 T est une String -v,     v- E est une String (normalement un type d'erreur)
+// ici                 T est une String -v,     v- E est une String
 fn is_it_serge(lapin: &str) -> Result<String, String> {
     if lapin == "Serge" {
         // Tout se passe bien je renvoie un OK.
@@ -30,7 +30,7 @@ fn main() {
     //     ^-- lapinou est un Result. Donc il faut ouvrir l'enveloppe pour voir ce qu'il y a
     //     l'intérieure
 
-    // On a 1ere possibilité un peu violente (souvent utilisé quand l'erreur ne peut pas être
+    // On a la 1ere possibilité un peu violente (souvent utilisé quand l'erreur ne peut pas être
     // récupéré)
 
     println!("{}", lapinou.unwrap());

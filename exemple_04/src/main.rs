@@ -5,7 +5,7 @@ use std::env;
 use std::env::VarError;
 
 fn is_it_serge() -> Result<String, String> {
-    // Je cherche si la variable d'environnement Serge existe. env::var retourne un
+    // Je cherche si la variable d'environnement SERGE existe. env::var retourne un
     // Result<String, VarError>  --> https://doc.rust-lang.org/std/env/fn.var.html
     //VarError est en fait un enum:
     //
@@ -14,16 +14,18 @@ fn is_it_serge() -> Result<String, String> {
     //     NotUnicode(OsString),
     // }
     match env::var("SERGE") {
-        //  v- rust est stricte il va nous obliger à checker tout les cas.
+        //  Rust est stricte, il va nous obliger à checker tout les cas.
         Ok(env_var) => Ok(env_var.to_string()),
-        //                                  ^- pas de ; je fais un return implicit
+        //                                    ^- pas de ; je fais un return implicit
         Err(VarError::NotPresent) => {
             Err("Il n'y a pas de variable d'environnement Serge.".to_string())
-        }
+        } // <-- pas de ; je fais un return implicit
         Err(VarError::NotUnicode(_)) => {
             //                   ^- j'ignore la possibilité de savoir de quel caractère on parle.
             Err("La variable contient un caractère non unicode.".to_string())
-        } // On peut aussi faire un cas "générique" pour éviter les 2 cas d'erreurs
+        } // <-- pas de ; je fais un return implicit
+          //
+          // On peut aussi faire un cas "générique" pour éviter les 2 cas d'erreurs
           // Err(_) => ....  mais toutes les combinaisons doivent être checker.
     }
 

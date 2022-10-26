@@ -11,7 +11,7 @@ fn is_it_serge(lapin: &str) -> Result<String, String> {
 fn main() {
     let lapinou = is_it_serge("Serge");
 
-    // On a la 2eme possibilité un peu moins violente (souvent utilisé quand l'erreur ne peut pas être
+    // On a la 2ème possibilité un peu moins violente (souvent utilisé quand l'erreur ne peut pas être
     // récupéré)
     // On remplace unwrap() par expect("msg") qui nous en dit un peu plus sur le sujet.
 
@@ -21,7 +21,9 @@ fn main() {
     let lapinou2 = is_it_serge("Bugs Bunny");
 
     println!("{}", lapinou2.expect("Erreur ce n'est pas Serge"));
-    //                        ^-- ici on a une erreur, le unwrap() nous fait partir en panique !
+    //                        ^-- ici on a une erreur, le expect() nous fait partir en panique !
+    //                        mais avec plus d'info -v
     // thread 'main' panicked at 'Erreur ce n'est pas Serge: "Erreur c'est juste un 🐰"', src/main.rs:23:29
+    //
     // on est d'accord ca change pas grand chose.
 }

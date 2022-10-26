@@ -11,7 +11,7 @@ fn is_it_serge(lapin: &str) -> Result<String, String> {
 fn main() {
     let lapinou = is_it_serge("Serge");
 
-    // On a la 3eme possibilité qui est de testé le retour. Souvent ce que l'on veut faire pour
+    // On a la 3ème possibilité qui est de tester le retour. Souvent ce que l'on veut faire pour
     // prévenir l'utilisateur.
     // Pour faire cela souvent on utilise le pattern matching. (un sorte de super switch/case).
 
@@ -29,3 +29,10 @@ fn main() {
 
     // Pas de panique on a géré l'erreur avec un beau message pour l'utilisateur.
 }
+
+// 🦉 uggla   master  …  rust  for_lea  exemple_03  cargo run
+//    Compiling exemple_03 v0.1.0 (/home/uggla/workspace/rust/for_lea/exemple_03)
+//     Finished dev [unoptimized + debuginfo] target(s) in 0.41s
+//      Running `target/debug/exemple_03`
+// 🔞 aie! ouille ! Ah je suis bien !
+// Erreur c'est juste un 🐰 normal on est pas dans le métro boulet !
