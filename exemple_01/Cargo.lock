@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "for-lea"
+name = "example_01"
 version = "0.1.0"
