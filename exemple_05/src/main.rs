@@ -3,7 +3,7 @@ use std::env::VarError;
 
 fn is_it_serge() -> Result<String, VarError> {
     // Bon souvent tu veux pas faire la gestion d'erreur ici mais dans l'appelant.
-    // C'est la ou le '?'' vas être utile il va faire remonter l'erreur (bubble).
+    // C'est là ou le '?'' vas être utile il va faire remonter l'erreur (bubble).
     let env_var = env::var("SERGE")?;
     // Si il y a une erreur on la remonte, sinon on continue...
 

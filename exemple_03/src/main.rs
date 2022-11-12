@@ -13,7 +13,7 @@ fn main() {
 
     // On a la 3ème possibilité qui est de tester le retour. Souvent ce que l'on veut faire pour
     // prévenir l'utilisateur.
-    // Pour faire cela souvent on utilise le pattern matching. (un sorte de super switch/case).
+    // Pour faire cela souvent on utilise le pattern matching. (une sorte de super switch/case).
 
     match lapinou {
         Ok(msg) => println!("{}", msg),

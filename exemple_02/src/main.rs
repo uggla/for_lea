@@ -25,5 +25,5 @@ fn main() {
     //                        mais avec plus d'info -v
     // thread 'main' panicked at 'Erreur ce n'est pas Serge: "Erreur c'est juste un 🐰"', src/main.rs:23:29
     //
-    // on est d'accord ca change pas grand chose.
+    // on est d'accord ça change pas grand-chose.
 }

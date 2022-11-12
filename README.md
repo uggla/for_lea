@@ -14,4 +14,4 @@ Ce repository contient des exemples de code pour bien comprendre la notion de Re
 Avec Serge le lapin du métro. Référence aux [Kassos](https://www.youtube.com/watch?v=vS2e7VkDctY) (:warning: NSFW)
 ![Serge](images/serge.png)
 
-N'hésitez pas à créer des issues si vous avez des questions ou une PR si il y a des erreurs.
+N'hésitez pas à créer des issues si vous avez des questions ou une PR s'il y a des erreurs.

@@ -28,7 +28,7 @@ fn is_it_serge(lapin: &str) -> Result<String, String> {
 fn main() {
     let lapinou = is_it_serge("Serge");
     //     ^-- lapinou est un Result. Donc il faut ouvrir l'enveloppe pour voir ce qu'il y a
-    //     l'intérieure
+    //     l'intérieur
 
     // On a la 1ere possibilité un peu violente (souvent utilisé quand l'erreur ne peut pas être
     // récupéré)

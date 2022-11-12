@@ -14,19 +14,19 @@ fn is_it_serge() -> Result<String, String> {
     //     NotUnicode(OsString),
     // }
     match env::var("SERGE") {
-        //  Rust est stricte, il va nous obliger à checker tout les cas.
+        //  Rust est stricte, il va nous obliger à checker tous les cas.
         Ok(env_var) => Ok(env_var.to_string()),
         //                                    ^- pas de ; je fais un return implicit
         Err(VarError::NotPresent) => {
             Err("Il n'y a pas de variable d'environnement Serge.".to_string())
-        } // <-- pas de ; je fais un return implicit
+        } // <-- pas de ; je fais un return implicite
         Err(VarError::NotUnicode(_)) => {
             //                   ^- j'ignore la possibilité de savoir de quel caractère on parle.
             Err("La variable contient un caractère non unicode.".to_string())
-        } // <-- pas de ; je fais un return implicit
+        } // <-- pas de ; je fais un return implicite
           //
           // On peut aussi faire un cas "générique" pour éviter les 2 cas d'erreurs
-          // Err(_) => ....  mais toutes les combinaisons doivent être checker.
+          // Err(_) => ....  mais toutes les combinaisons doivent être checké.
     }
 
     // On a en fait "transformé" le Result<String, VarError> en Result<String, String>
